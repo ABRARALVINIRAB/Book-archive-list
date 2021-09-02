@@ -27,8 +27,6 @@ const showData = (books) => {
 
         parent.textContent = '';
         totalResult.innerText = '';
-
-
     }
     else {
         error.innerText = '';
@@ -46,13 +44,13 @@ const showData = (books) => {
         <div class="">
         <div class="col">
             <div class="card h-100 shadow-lg p-3 mb-5 bg-body rounded">
-            <img src="https://covers.openlibrary.org/b/id/${booksLists.cover_i}-M.jpg " class="card-img-top img-fluid" alt="...">
+            <img src="https://covers.openlibrary.org/b/id/${booksLists.cover_i ? booksLists.cover_i : 10909258}-M.jpg  " class="card-img-top img-fluid" alt="...">
            
         <div class="card-body">
             <h3 class="card-title">Book name : ${booksLists.title ? booksLists.title : 'Not Found'}</h3>
-            <h5 class="card-text">Author : ${booksLists.author_name ? booksLists.author_name : 'Not Found'}</h5>
+            <h5 class="card-text">Author : ${booksLists.author_name ? booksLists.author_name[0] : 'Not Found'}</h5>
             <h5 class="card-text">First published : ${booksLists.first_publish_year ? booksLists.first_publish_year : 'Not Found'}</h5>
-            <h5 class="card-text">Publisher : ${booksLists.publisher ? booksLists.publisher : 'Not Found'}</h5>
+            <h5 class="card-text">Publisher : ${booksLists.publisher ? booksLists.publisher[0] : 'Not Found'}</h5>
         </div>
             </div >
         </div >
